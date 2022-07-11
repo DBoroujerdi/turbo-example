@@ -1,0 +1,26 @@
+{
+  "name": "turborepo-basic-yarn",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "clean": "turbo run clean",
+    "build": "turbo run build",
+    "package": "turbo run package",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "engines": {
+    "node": "~16",
+    "npm": "Please use yarn, npm does not work turbo repo pruning.",
+    "yarn": "~1"
+  },
+  "devDependencies": {
+    "prettier": "latest",
+    "turbo": "latest"
+  }
+}

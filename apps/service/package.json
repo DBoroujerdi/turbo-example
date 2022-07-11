@@ -1,0 +1,19 @@
+{
+  "name": "service",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npx tsc",
+    "package": "cd ../../ && docker build . -f apps/service/Dockerfile -t service:latest"
+  },
+  "dependencies": {
+    "cowsay": "^1.5.0",
+    "fastify": "^4.2.0"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "tsconfig": "*",
+    "typescript": "^4.5.3"
+  }
+}
